@@ -10,8 +10,7 @@ resource "aws_dynamodb_table" "tfc_example_table" {
   read_capacity  = var.db_read_capacity
   write_capacity = var.db_write_capacity
   hash_key       = "UUID"
-  range_key      = "UserName"
-  range_key      = "Test"
+  range_key      = "UserName1"
 
   attribute {
     name = "UUID"
@@ -19,12 +18,7 @@ resource "aws_dynamodb_table" "tfc_example_table" {
   }
 
   attribute {
-    name = "UserName"
-    type = "S"
-  }
-
-  attribute {
-    name = "Test"
+    name = "UserName1"
     type = "S"
   }
 
